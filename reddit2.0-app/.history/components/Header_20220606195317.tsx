@@ -44,8 +44,8 @@ function Header() {
             <SpeakerphoneIcon className='icon' />
         </div>
 
-        <div className='ml-5 flex items-center lg:hidden'>
-            <MenuIcon className='icon' />
+        <div>
+            <MenuIcon />
         </div>
     </div>
   )

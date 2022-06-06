@@ -1,15 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
-import { ChevronDownIcon, HomeIcon, MenuIcon, SearchIcon } from "@heroicons/react/solid";
-import {  
-    BellIcon, 
-    ChatIcon, 
-    GlobeIcon, 
-    PlusIcon, 
-    SparklesIcon, 
-    SpeakerphoneIcon, 
-    VideoCameraIcon,
- } from "@heroicons/react/outline";
+import { ChevronDownIcon, HomeIcon, SearchIcon } from "@heroicons/react/solid";
+import {  } from "@heroicons/react/outline";
 
 function Header() {
   return (
@@ -32,21 +24,6 @@ function Header() {
             <input className='flex-1 bg-transparent outline-none' type="text" placeholder='Search Reddit' />
             <button type='submit' hidden />
         </form>
-
-        <div className='text-gray-500 items-center space-x-2 mx-5 hidden lg:inline-flex'>
-            <SparklesIcon className='icon' />
-            <GlobeIcon className='icon' />
-            <VideoCameraIcon className='icon' />
-            <hr className='h-10 border border-gray-100' />
-            <ChatIcon className='icon' />
-            <BellIcon className='icon' />
-            <PlusIcon className='icon' />
-            <SpeakerphoneIcon className='icon' />
-        </div>
-
-        <div className='ml-5 flex items-center lg:hidden'>
-            <MenuIcon className='icon' />
-        </div>
     </div>
   )
 }
@@ -73,7 +50,6 @@ of where the image is coming from. And that is done in the next.config.js
 file.   The image also wont show until we provide it with a size. So we set 
 the height to be 10
 
-For the 7 Icons I created a custom utility class, in styles/globals.css file. I made
-.icon a custom utility class with its own set of styled contraints. 
+
 
 */

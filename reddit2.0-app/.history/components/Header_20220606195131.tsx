@@ -33,7 +33,7 @@ function Header() {
             <button type='submit' hidden />
         </form>
 
-        <div className='text-gray-500 items-center space-x-2 mx-5 hidden lg:inline-flex'>
+        <div className=' text-gray-500 items-center space-x-2 mx-5'>
             <SparklesIcon className='icon' />
             <GlobeIcon className='icon' />
             <VideoCameraIcon className='icon' />
@@ -42,10 +42,6 @@ function Header() {
             <BellIcon className='icon' />
             <PlusIcon className='icon' />
             <SpeakerphoneIcon className='icon' />
-        </div>
-
-        <div className='ml-5 flex items-center lg:hidden'>
-            <MenuIcon className='icon' />
         </div>
     </div>
   )
