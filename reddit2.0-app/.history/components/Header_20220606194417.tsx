@@ -33,7 +33,7 @@ function Header() {
             <button type='submit' hidden />
         </form>
 
-        <div className='text-gray-500 items-center space-x-2 mx-5 hidden lg:inline-flex'>
+        <div>
             <SparklesIcon className='icon' />
             <GlobeIcon className='icon' />
             <VideoCameraIcon className='icon' />
@@ -42,10 +42,6 @@ function Header() {
             <BellIcon className='icon' />
             <PlusIcon className='icon' />
             <SpeakerphoneIcon className='icon' />
-        </div>
-
-        <div className='ml-5 flex items-center lg:hidden'>
-            <MenuIcon className='icon' />
         </div>
     </div>
   )
@@ -73,7 +69,6 @@ of where the image is coming from. And that is done in the next.config.js
 file.   The image also wont show until we provide it with a size. So we set 
 the height to be 10
 
-For the 7 Icons I created a custom utility class, in styles/globals.css file. I made
-.icon a custom utility class with its own set of styled contraints. 
+
 
 */
