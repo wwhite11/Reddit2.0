@@ -63,14 +63,10 @@ function Header() {
                   alt=''
                   />
                   </div>
-                  <div className='flex-1 text-xs'>
-                      <p className='truncate'>{session.user?.name}</p>
-                  <p className='text-gray-400'>1 Karma</p>
-                  </div>
-
-                  <ChevronDownIcon  className='h-5 flex-shrink-0 text-gray-400'/>
+                  <p 
+                  className='text-gray-400'>Sign Out
+                  </p>
              </div>
-
         ): (
             <div 
         onClick={()=> signIn()} 
@@ -126,5 +122,4 @@ renaming it to 'session'.
 
 Line 53:  Usinng a Ternary operator, If there is a 'session' then I want to render some logout logic, 
 else I will render some login logic. 
-The logged in data we show is the users name. 
 */

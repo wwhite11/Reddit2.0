@@ -126,5 +126,4 @@ renaming it to 'session'.
 
 Line 53:  Usinng a Ternary operator, If there is a 'session' then I want to render some logout logic, 
 else I will render some login logic. 
-The logged in data we show is the users name. 
 */
