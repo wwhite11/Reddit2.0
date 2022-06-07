@@ -26,10 +26,6 @@ export default MyApp
     The app is now powered up which allows me to use all of the core 
     next-auth hooks throughout the application. 
 
-  The Header component moved from  the index.tsx file to the _app.tsx file
-  on Line 10: due to the fact that I want access to this Header or Navigation 
-  bar no matter which page I am on. 
 
-  Then I add a parallax effect to the nav bar by adding a overflow on the y axis.
 
 */ 
