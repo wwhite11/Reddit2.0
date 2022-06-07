@@ -63,16 +63,15 @@ function Header() {
                   alt=''
                   />
                   </div>
-                  <div className='flex-1 text-xs'>
-                      <p className='truncate'>{session.user?.name}</p>
-                  <p className='text-gray-400'>1 Karma</p>
-                  </div>
-
-                  <ChevronDownIcon  className='h-5 flex-shrink-0 text-gray-400'/>
+                  <p 
+                  className='text-gray-400'>Sign Out
+                  </p>
              </div>
-
         ): (
-            <div 
+
+        )}
+
+        <div 
         onClick={()=> signIn()} 
         className='hidden cursor-pointer items-center lg:flex  space-x-2 border border-gray-100 p-2'>
         <div 
@@ -88,9 +87,6 @@ function Header() {
              className='text-gray-400'>Sign In
              </p>
         </div>
-        )}
-
-        
     </div>
   )
 }
@@ -123,8 +119,4 @@ For the 7 Icons I created a custom utility class, in styles/globals.css file. I 
 Line 16: When we login we get a session cookie, proving who we say we are for authentication
 so we dont have to keep logging in.  We are retriving the data of the user once we login in and 
 renaming it to 'session'. 
-
-Line 53:  Usinng a Ternary operator, If there is a 'session' then I want to render some logout logic, 
-else I will render some login logic. 
-The logged in data we show is the users name. 
 */

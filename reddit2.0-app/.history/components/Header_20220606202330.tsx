@@ -10,10 +10,8 @@ import {
     SpeakerphoneIcon, 
     VideoCameraIcon,
  } from "@heroicons/react/outline";
-import { signIn, signOut, useSession } from 'next-auth/react';
 
 function Header() {
-    const { data: session } = useSession();
   return (
     <div className='sticky top-0 z-50 flex bg-white px-4 py-2 shadow-sm'>
         <div className='relative h-10 w-20 flex-shrink-0 cursor-pointer '>
@@ -50,47 +48,9 @@ function Header() {
             <MenuIcon className='icon' />
         </div>
 
-        {session ? ( 
-             <div 
-             onClick={()=> signOut()} 
-             className='hidden cursor-pointer items-center lg:flex  space-x-2 border border-gray-100 p-2'>
-             <div 
-             className='relative h-5 w-5 flex-shrink-0'>
-                 <Image
-                  objectFit='contain'
-                  src='https://links.papareact.com/23l' 
-                  layout='fill'
-                  alt=''
-                  />
-                  </div>
-                  <div className='flex-1 text-xs'>
-                      <p className='truncate'>{session.user?.name}</p>
-                  <p className='text-gray-400'>1 Karma</p>
-                  </div>
-
-                  <ChevronDownIcon  className='h-5 flex-shrink-0 text-gray-400'/>
-             </div>
-
-        ): (
-            <div 
-        onClick={()=> signIn()} 
-        className='hidden cursor-pointer items-center lg:flex  space-x-2 border border-gray-100 p-2'>
-        <div 
-        className='relative h-5 w-5 flex-shrink-0'>
-            <Image
-             objectFit='contain'
-             src='https://links.papareact.com/23l' 
-             layout='fill'
-             alt=''
-             />
-             </div>
-             <p 
-             className='text-gray-400'>Sign In
-             </p>
+        <div>
+            <Image src='https://links.papareact.com/23l' height={5} width={5} alt=''/>
         </div>
-        )}
-
-        
     </div>
   )
 }
@@ -120,11 +80,4 @@ the height to be 10
 For the 7 Icons I created a custom utility class, in styles/globals.css file. I made
 .icon a custom utility class with its own set of styled contraints. 
 
-Line 16: When we login we get a session cookie, proving who we say we are for authentication
-so we dont have to keep logging in.  We are retriving the data of the user once we login in and 
-renaming it to 'session'. 
-
-Line 53:  Usinng a Ternary operator, If there is a 'session' then I want to render some logout logic, 
-else I will render some login logic. 
-The logged in data we show is the users name. 
 */
