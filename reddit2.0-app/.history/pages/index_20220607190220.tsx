@@ -6,9 +6,11 @@ const Home: NextPage = () => {
   return (
     <div className="">
       <Head>
-        <title>Reddit 2.0</title>
+        <title>Reddit jdjdk2.0</title>
       </Head>
       <PostBox />
+      
+      <h1>LKDJFIUHIUH</h1>
     </div>
   )
 }

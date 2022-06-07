@@ -7,8 +7,11 @@ const Home: NextPage = () => {
     <div className="">
       <Head>
         <title>Reddit 2.0</title>
+        <p>dksij</p>
       </Head>
       <PostBox />
+      
+      <h1>LKDJFIUHIUH</h1>
     </div>
   )
 }

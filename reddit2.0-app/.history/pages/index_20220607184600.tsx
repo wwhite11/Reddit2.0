@@ -1,6 +1,7 @@
 import type { NextPage } from 'next'
 import Head from 'next/head'
-import PostBox from '../components/PostBox'
+import Image from 'next/image'
+import Header from '../components/Header'
 
 const Home: NextPage = () => {
   return (
@@ -8,14 +9,9 @@ const Home: NextPage = () => {
       <Head>
         <title>Reddit 2.0</title>
       </Head>
-      <PostBox />
+      
     </div>
   )
 }
 
 export default Home
-
-
-
-
-/* I am now building the Postbox UI  finally after setting up all the backend stuff */

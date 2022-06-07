@@ -9,6 +9,10 @@ const Home: NextPage = () => {
         <title>Reddit 2.0</title>
       </Head>
       <PostBox />
+      <h1>Hellond</h1>
+      <div>
+    {/* Feed */}
+      </div>
     </div>
   )
 }
