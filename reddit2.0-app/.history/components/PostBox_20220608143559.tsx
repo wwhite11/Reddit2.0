@@ -24,11 +24,8 @@ function PostBox() {
       formState: { errors },
     } = useForm<FormData>()
 
-    const onSubmit = handleSubmit(async (formData) =>{
-      console.log(formData)
-    })
 
-  return <form onSubmit={onSubmit} className='sticky top-16 z-50 bg-white border rounded-md border-gray-300 p-2'>
+  return <form className='sticky top-16 z-50 bg-white border rounded-md border-gray-300 p-2'>
       <div className='flex items-center space-x-3'>
             <Avatar />
           <input 
@@ -44,7 +41,7 @@ function PostBox() {
           <LinkIcon className='h-6 text-gray-300' />
       </div>
       {/* we are using the watch feature in React Hook Form. */}
-      {!!watch('postTitle') && (
+      {watch('postTitle') && (
         <div className='flex flex-col py-2'>
           {/* Body */}
           <div className='flex items-center px-2'>
@@ -80,20 +77,12 @@ function PostBox() {
 
           {/* Errors */}
           {Object.keys(errors).length > 0 && (
-            <div className='space-y-2 p-2 text-red-500'>
+            <div>
               {errors.postTitle?.type === 'required' && (
                 <p>- A Post Title is required</p>
               )}
-              {errors.subreddit?.type === 'required' && (
-                <p>- A Subreddit is required</p>
-              )}
             </div>
           )}
-          {!!watch('postTitle') && (
-            <button
-            type='submit' 
-            className='w-full rounded-sm bg-blue-400 p-2 text-white'>Creat Post</button>
-          ) }
         </div>
       )}
   </form>
